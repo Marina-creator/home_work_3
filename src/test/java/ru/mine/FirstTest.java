@@ -19,12 +19,8 @@ public class FirstTest {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.timeout = 10000;
     //    Configuration.browserSize = "1366 x 768";
+        Configuration.holdBrowserOpen = true;
 
-    }
-
-    @AfterAll
-    static void setUpAfter(){
-        sleep(4000);
     }
 
     @Test
@@ -62,9 +58,15 @@ public class FirstTest {
 
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table-responsive table").shouldHave(text("Marina"), text("Abakumova"),
-                text("Abakumova@mine.ru"), text("9998887766"), text("Georgia, Batumi"), text("Economics"),
-                text("1.jpg"), text("Haryana"), text("Karnal"));
+        $(".table-responsive table").shouldHave(text("Marina"),
+                text("Abakumova"),
+                text("Abakumova@mine.ru"),
+                text("9998887766"),
+                text("Georgia, Batumi"),
+                text("Economics"),
+                text("1.jpg"),
+                text("Haryana"),
+                text("Karnal"));
         $(".table-responsive table").$(byText("Date of Birth"))
                 .parent().shouldHave(text("17 December,1992"));
     }
