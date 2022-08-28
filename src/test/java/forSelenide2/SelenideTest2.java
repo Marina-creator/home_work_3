@@ -14,7 +14,7 @@ public class SelenideTest2 {
     static void setUp(){
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
-        Configuration.holdBrowserOpen = true;
+        Configuration.headless = true;
     }
 
     @Test
