@@ -1,4 +1,4 @@
-package ru.mine.tests;
+package ru.mine;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
