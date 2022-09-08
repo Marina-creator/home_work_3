@@ -18,7 +18,7 @@ public class FirstTest {
         Configuration.browser = "chrome";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.timeout = 10000;
-    //    Configuration.browserSize = "1366 x 768";
+        //    Configuration.browserSize = "1366 x 768";
         Configuration.holdBrowserOpen = true;
 
     }
